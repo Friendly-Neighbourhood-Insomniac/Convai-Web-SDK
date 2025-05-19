@@ -1,22 +1,21 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "./dist/typings",
-    "sourceMap": true,
-    "module": "esnext", // Compatible with both Node.js and browser
-    "moduleResolution": "node", // Tell tsc to look in node_modules for modules
-    "target": "es6",
-    "lib": ["esnext", "dom"],
-    "removeComments": true,
-    "noImplicitReturns": false,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "stripInternal": true,
-    "noFallthroughCasesInSwitch": true,
-    "outDir": "dist",
-    "noEmitOnError": true,
-    "noUnusedParameters": true
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "Proto"]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
